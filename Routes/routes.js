@@ -13,7 +13,7 @@ router.get('/allusers',Usercontroller.allusers)
 
 
 // for service 
-router.post('/addservice',jwtmiddle,serviceControl.addservice)
+router.post('/addservice',serviceControl.addservice)
 router.put('/updateservice/:id',jwtmiddle,serviceControl.editService)
 router.delete('/deleteService/:id',jwtmiddle,serviceControl.deleteService)
 router.get('/allservices' ,jwtmiddle,serviceControl.allservices)

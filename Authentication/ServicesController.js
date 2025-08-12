@@ -23,7 +23,7 @@ exports.editService = async(req,res)=>{
     try{
         const {id} = req.params
         const {name,description,price,createdBy}=req.body
-        const find = services.updateOne(id,{name,description,price,createdBy})
+        const find = await services.updateOne(id,{name,description,price,createdBy})
         res.status(200).json(find)
     }
     catch(e){
